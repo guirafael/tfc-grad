@@ -1,0 +1,7 @@
+# Required
+numpy>=2.2.6 
+scipy
+networkx
+pandas>=2.0
+matplotlib
+setuptools<69.5.1
