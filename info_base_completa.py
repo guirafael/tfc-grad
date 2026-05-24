@@ -1,15 +1,13 @@
-import networkx as nx
-import matplotlib.pyplot as mp
-import scipy as sc
-import pandas as pd
-import numpy as np
-import setuptools as st
+# Este script tem o objetivo de realizar uma delimitação preliminar de setores de controle (DMCs) em uma rede de abastecimento de água utilizando algoritmos de agrupamento (community detection) aplicados à estrutura topológica da rede.
+# A ideia é identificar grupos de nós que estão mais fortemente conectados entre si do que com o restante da rede, o que pode indicar potenciais DMCs.
+# O usuário pode escolher entre diferentes algoritmos de detecção de comunidades, como Greedy Modularity, Girvan-Newman e Label Propagation.
+# O resultado é visualizado por meio de um gráfico da rede, onde os nós são coloridos de acordo com o cluster ao qual pertencem.
+# Ou seja, é uma delimitação preliminar realizada por meio de algoritmos de agrupamento aplicados à estrutura topológica da rede
+
 import wntr
+import matplotlib.pyplot as mp
 
 from networkx.algorithms import community
-
-# Delimitação inicial dos setores realizada por meio de algoritmos de agrupamento aplicados à estrutura topológica da rede
-# Posteriormente deve ser validada por simulações hidráulicas
 
 # CARREGAR MODELO
 inp_file = './dados/base_completa_v6.inp'

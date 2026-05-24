@@ -1,11 +1,11 @@
+# Este script tem o objetivo de carregar o modelo hidráulico do setor isolado da Paulista, obter informações básicas sobre a rede e converter o modelo em um grafo para análise de conectividade e grau médio.
+# Se o script retornar "Grafo conectado: False", significa que o grafo está desconectado. Para identificar componentes e resolver o problema de conexão, utilizar 'componentes_desconectados.py'
+
 import wntr
 import networkx as nx
 
 # CARREGAR MODELO ISOLADO
-import os
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-inp_file = os.path.join(BASE_DIR, 'dados', 'base_isolada_v2.inp')
-
+inp_file = './dados/base_isolada_v2.inp'
 wn = wntr.network.WaterNetworkModel(inp_file)
 
 # OBTER INFORMAÇÕES BÁSICAS
