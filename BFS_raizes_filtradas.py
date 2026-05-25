@@ -5,6 +5,7 @@
 
 import wntr
 import matplotlib.pyplot as plt
+import json
 from collections import deque
 
 # CARREGAR MODELO
@@ -46,3 +47,9 @@ wntr.graphics.plot_network(
 )
 
 plt.show()
+
+# SALVAR RESULTADO DO BFS
+with open('./resultados/node_cluster_bfs.json', 'w') as f:
+  json.dump(node_cluster, f)
+
+print("Resultado do BFS salvo em ./resultados/node_cluster_bfs.json")
