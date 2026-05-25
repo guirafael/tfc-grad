@@ -1,0 +1,12 @@
+{
+  "nos_bfs": 1222,
+  "nos_saae": 1210,
+  "nos_comparaveis": 1210,
+  "nos_concordantes": 787,
+  "taxa_concordancia": 65.0,
+  "mapeamento_bfs_saae": {
+    "1": "PAULISTA 3",
+    "2": "PAULISTA 1",
+    "3": "PAULISTA 1"
+  }
+}
